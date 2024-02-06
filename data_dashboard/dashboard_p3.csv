@@ -1,0 +1,5 @@
+member_type,bike_type,avg_duration
+casual,classic_bike,32.01200778668941
+casual,electric_bike,14.254109258573209
+member,classic_bike,13.907740669074412
+member,electric_bike,11.13558265746002

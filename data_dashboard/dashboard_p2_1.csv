@@ -1,0 +1,6 @@
+member_type,bike_type,total,total_rides,percentage
+casual,classic_bike,876881,2059179,42.58401042357172
+casual,docked_bike,78287,2059179,3.8018550111476466
+casual,electric_bike,1104011,2059179,53.61413456528062
+member,classic_bike,1819130,3660698,49.693528392672654
+member,electric_bike,1841568,3660698,50.30647160732734
