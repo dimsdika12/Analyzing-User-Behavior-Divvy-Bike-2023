@@ -1,12 +1,8 @@
 import streamlit as st
-#import datetime
 import pandas as pd
-#import numpy as np
 import plotly.express as px
-#import matplotlib.pyplot as plt
 from PIL import Image
 import altair as alt
-#import seaborn as sns
 
 df1 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p1.csv')
 df2 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p2.csv')
@@ -15,7 +11,7 @@ df3 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-B
 df4 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p4.csv')
 df5 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p5.csv')
 df6 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p6.csv')
-image1 = Image.open('aset\\bike.jpg')
+image1 = Image.open('aset/bike.jpg')
 
 st.set_page_config(
     page_title = 'Divvy Bike Share Trip',
@@ -42,7 +38,7 @@ with tab1:
         ''', unsafe_allow_html=True)
 
 with tab2:
-    image2 = Image.open("aset\\price.png")
+    image2 = Image.open("aset/price.png")
     st.image(image2, width=600, caption='Price as of January 2024.')
 with tab3 :
     st.markdown('''
