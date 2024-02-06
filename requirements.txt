@@ -1,6 +1,0 @@
-﻿altair==5.1.2
-pandas==1.4.1
-Pillow==9.0.1
-plotly==5.18.0
-plotly-express==0.4.1
-streamlit==1.30.0
