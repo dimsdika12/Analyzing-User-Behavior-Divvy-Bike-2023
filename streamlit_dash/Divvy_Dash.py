@@ -41,8 +41,8 @@ with tab1:
     st.markdown('''
     **Divvy Data**
 
-    The Divvy Data is a real-world dataset from Lyft Bikes and Scooters, LLC, the company that operates Chicago's Divvy bicycle sharing service. This data is available to the public, and you can download it from this [link](https://divvybikes.com/system-data).
-
+    The Divvy Data is a real-world dataset from Lyft Bikes and Scooters, LLC, the company that operates Chicago's Divvy bicycle sharing service.This dataset contains information about Historical trip data from Divvy. This data is available to the public, and you can download it from this [link](https://divvybikes.com/system-data).
+    
     **Divvy Offers 3 Types of Bikes:**
     - Classic Bike, Docked Bike,and Electric Bike
 
