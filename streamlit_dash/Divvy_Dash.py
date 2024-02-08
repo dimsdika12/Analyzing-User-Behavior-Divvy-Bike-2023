@@ -12,13 +12,15 @@ df4 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-B
 df5 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p5.csv')
 df6 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p6.csv')
 image1 = Image.open('aset/bike.jpg')
+image2 = Image.open('aset/price.png')
 
 st.set_page_config(
-    page_title = 'Divvy Bike Share Trip',
+    page_title = 'Divvy Bike User Behavior Dashboard',
+    page_icon='bar_chart',
     layout='wide'
 )
 
-st.header("Divvy Bike Share Trip 2023" )
+st.header("Divvy Bike User Behavior Dashboard" )
 st.write("")
 
 
@@ -34,12 +36,26 @@ with tab1:
         Divvy Bikes is a bike-sharing system operating in Chicago and Evanston.
         Owned by the Chicago Department of Transportation and run by Lyft Bikes and Scooters, LLC, it offers affordable transportation for locals and tourists alike.
         With bikes available 24/7, users can explore the cities at any time of the day, any day of the year.
-        </div>
         ''', unsafe_allow_html=True)
+    st.markdown('<p style="font-size: 24px; color: #FF69B4; font-weight: bold;"><span>Data</span> <span style="color: #0077b6;">Details</span></p>', unsafe_allow_html=True)
+    st.markdown('''
+    **Divvy Data**
 
+    The Divvy Data is a real-world dataset from Lyft Bikes and Scooters, LLC, the company that operates Chicago's Divvy bicycle sharing service. This data is available to the public, and you can download it from this [link](https://divvybikes.com/system-data).
+
+    **Divvy Offers 3 Types of Bikes:**
+    - Classic Bike, Docked Bike,and Electric Bike
+
+    **Member Type:**
+    - "Member" for Divvy Membership (annual membership)
+    - "Casual" for Single ride or Day-pass (non-annual membership)
+
+    **Note:** According to the data available, starting from September 2023, Divvy won't provide any docked bicycles. Instead, Divvy now offers three types of bikes: Classic Bike, Scooter, and Electric Bike.
+    ''', unsafe_allow_html=True)
+   
+                    
 with tab2:
-    image2 = Image.open("aset/price.png")
-    st.image(image2, width=600, caption='Price as of January 2024.')
+    st.image(image2, width=650, caption='Price as of January 2024.')
 with tab3 :
     st.markdown('''
     **Analyzing User Behavior Divvy Bike in 2023**
@@ -134,9 +150,6 @@ with description_p2:
                 
     Further analysis reveals that among casual riders, 53.61% opt for electric bikes, 42.58% prefer classic bikes, and the remaining 3.80% select docked bikes.
     Conversely, among members, 50.31% favor electric bikes, and 49.69% prefer classic bikes.
-                
-    Note: Based on the available data, as of September 2023, there are no longer docked bike types available in Divvy's service.
-    As of January 2024, Divvy offers three types of bikes: Classic, Scooter, and Ebike.
     </div>
     ''', unsafe_allow_html=True)
 
@@ -244,17 +257,15 @@ st.markdown('''
     <div style="text-align: justify">
     Based on the data obtained from Divvy bike rentals in 2023, here are some recommendations for stakeholders:
 
-1. **Membership Promotion Strategies**: Given that a significant portion of bike rentals comes from members, there should be continued efforts to promote and incentivize membership subscriptions. This could include offering discounts for long-term memberships or introducing loyalty programs to encourage repeat usage.
+1. **Membership Retention and Promotion Strategies:** Offering discounts or loyalty rewards can help retain existing members. Meanwhile, for casual users, informing them about the benefits of annual membership could increase awareness. For example, subscribing can lead to savings of over 60% when using electric bikes, thereby encouraging them to consider becoming annual members.
 
-2. **Electric Bike Investment**: Since electric bikes constitute the highest proportion of usage among both casual and member riders, investing in expanding the fleet of electric bikes could attract more users and enhance overall customer satisfaction.
+2. **Electric Bike Investment**: Since most people, both members and casual riders, prefer electric bikes, it makes sense to invest in more of them. This can bring in more users and make everyone happier.
 
-3. **Optimizing Rental Duration**: Understanding that casual riders tend to spend more time on bike rentals compared to members, there could be strategies to encourage longer rental durations among members, such as offering bundled rental packages or discounts for extended usage periods.
+3. **Seasonal Variations Management**: Divvy can implement seasonal promotion strategies to maximize bike usage. For instance, promoting spring and summer deals at the end of winter, and conversely, advertising fall and winter promotions towards the end of summer. This approach can boost bike rental utilization by aligning promotions with seasonal changes.
 
-4. **Seasonal Variations Management**: Acknowledging the seasonal fluctuations in bike rentals, Divvy can adjust its operational capacity and marketing efforts accordingly. During peak seasons like spring and summer, additional bikes and staff may be required to meet the increased demand, whereas promotional offers during off-peak seasons could help stimulate usage.
+4. **Weekday vs. Weekend Strategies**:  Understand that members like using bikes during the week, while casual riders prefer weekends. Offering different deals and promotions for each group could help get more people riding. For example, focusing promotional campaigns targeted towards members on weekdays and offering special weekend deals to attract casual riders can help optimize usage throughout the week.
 
-5. **Weekday vs. Weekend Strategies**: Divvy should tailor its marketing and operational strategies to accommodate the different usage patterns between weekdays and weekends. For example, focusing promotional campaigns targeted towards members on weekdays and offering special weekend deals to attract casual riders can help optimize usage throughout the week.
-
-6. **Peak Hours Management**: Understanding the peak hours of bike rentals, especially the dual peaks experienced by member riders, Divvy can deploy resources effectively to ensure sufficient bike availability and streamline rental processes during these times. Additionally, targeted promotions or incentives during off-peak hours could help redistribute demand more evenly throughout the day.
+5. **Peak Hours Management**: Understanding when bike rentals peak, especially with member riders, Divvy can make sure there are enough bikes available and avoid maintenance during these periods to keep things running smoothly. Also, offering special deals during quieter times can help spread out demand more evenly throughout the day.
 
 By implementing these recommendations, Divvy can enhance user experience, increase ridership, and maximize the utilization of its bike rental service.        
     
