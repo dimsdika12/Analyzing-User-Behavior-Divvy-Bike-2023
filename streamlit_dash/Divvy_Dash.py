@@ -100,7 +100,7 @@ with casual_rider:
 st.markdown('''
     <div style="text-align: justify">
 During 2023, Divvy recorded a total of 5,719,877 bike rentals.
-Approximately 64% of these rentals, equivalent to roughly 3.7 million users, were from members,
+Approximately 64% of these rentals, equivalent to roughly 3.6 million users, were from members,
 whereas the remaining 36%, totaling 2 million rentals, were made by casual users.
 </div>
     ''', unsafe_allow_html=True)
@@ -160,7 +160,7 @@ with description_p3:
     st.write("")
     st.markdown('''
     <div style="text-align: justify">
-    On average, casual riders typically spend 32 minutes riding electric bikes and 14 minutes riding classic bikes. 
+    On average, casual riders typically spend 32 minutes riding classic bikes and 14 minutes riding electric bikes. 
     In contrast, member riders have an average duration of 14 minutes for classic bikes and 11 minutes for electric bikes.
 
     In general, casual riders invest more time in bike rentals compared to member riders, regardless of whether they're using classic bikes or electric bikes. 
