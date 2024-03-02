@@ -17,7 +17,8 @@ image2 = Image.open('aset/price.png')
 st.set_page_config(
     page_title = 'Divvy Bike User Behavior Dashboard',
     page_icon='bar_chart',
-    layout='wide'
+    layout='wide',
+    theme='dark'
 )
 
 st.header("Divvy Bike User Behavior Dashboard" )
@@ -177,6 +178,29 @@ with chart_p3:
     # Menampilkan plot di Streamlit
     st.plotly_chart(fig3)
 
+chart_p5,description_p5 = st.columns([1.5,1])
+with chart_p5:
+    fig5 = px.bar(df5,x='day_name', y='total', color='member_type',barmode='group',
+              title='Daily Bike Rentals by Day of Week',
+              labels={'day_name':'Day','total':'Number of Bike Rentals'},
+              color_discrete_sequence=['#026590', '#45a70b'])
+
+    st.plotly_chart(fig5)
+st.write("")
+with description_p5:
+    st.write("")
+    st.write("")
+    st.markdown('''
+    <div style="text-align: justify">
+    Analyzing the daily bike rentals based on the day of the week shows clear differences in patterns between member and casual riders.
+
+                            
+    Members tend to be more active on weekdays, but their activity decreases notably during the weekend.
+    In contrast, casual riders are more active during the weekend, especially on Fridays, which stands out as their busiest day.
+                
+    This emphasizes a distinct usage trend, where members prefer weekdays while casual riders lean towards weekends, especially Fridays.
+    </div>
+    ''', unsafe_allow_html=True)
 
 freq = st.selectbox("Freq", ['Daily','Monthly'])
 
@@ -206,30 +230,6 @@ st.markdown('''
     Conversely, during autumn and winter, there's a considerable decrease in the number of users, hitting its lowest level in January with about 190,301 Monthly Bike Rentals.
     ''', unsafe_allow_html=True)
 
-
-chart_p5,description_p5 = st.columns([1.5,1])
-with chart_p5:
-    fig5 = px.bar(df5,x='day_name', y='total', color='member_type',barmode='group',
-              title='Daily Bike Rentals by Day of Week',
-              labels={'day_name':'Day','total':'Number of Bike Rentals'},
-              color_discrete_sequence=['#026590', '#45a70b'])
-
-    st.plotly_chart(fig5)
-st.write("")
-with description_p5:
-    st.write("")
-    st.write("")
-    st.markdown('''
-    <div style="text-align: justify">
-    Analyzing the daily bike rentals based on the day of the week shows clear differences in patterns between member and casual riders.
-
-                            
-    Members tend to be more active on weekdays, but their activity decreases notably during the weekend.
-    In contrast, casual riders are more active during the weekend, especially on Fridays, which stands out as their busiest day.
-                
-    This emphasizes a distinct usage trend, where members prefer weekdays while casual riders lean towards weekends, especially Fridays.
-    </div>
-    ''', unsafe_allow_html=True)
        
 fig6 = px.bar(df6,x='hour', y='total', color='member_type',barmode='group',
               title='Rush Hour Bike Rental',
