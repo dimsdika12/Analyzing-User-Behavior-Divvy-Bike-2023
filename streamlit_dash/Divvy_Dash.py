@@ -17,8 +17,7 @@ image2 = Image.open('aset/price.png')
 st.set_page_config(
     page_title = 'Divvy Bike User Behavior Dashboard',
     page_icon='bar_chart',
-    layout='wide',
-    theme='dark'
+    layout='wide'
 )
 
 st.header("Divvy Bike User Behavior Dashboard" )
