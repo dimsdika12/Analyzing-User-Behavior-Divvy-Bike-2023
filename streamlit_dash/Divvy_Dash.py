@@ -195,9 +195,9 @@ with description_p5:
 
                             
     Members tend to be more active on weekdays, but their activity decreases notably during the weekend.
-    In contrast, casual riders are more active during the weekend, especially on Fridays, which stands out as their busiest day.
+    In contrast, casual riders are more active during the weekend, especially on Saturday, which stands out as their busiest day.
                 
-    This emphasizes a distinct usage trend, where members prefer weekdays while casual riders lean towards weekends, especially Fridays.
+    This emphasizes a distinct usage trend, where members prefer weekdays while casual riders lean towards weekends, especially Saturday.
     </div>
     ''', unsafe_allow_html=True)
 
