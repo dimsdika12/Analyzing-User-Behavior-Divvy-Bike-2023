@@ -11,8 +11,9 @@ df3 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-B
 df4 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p4.csv')
 df5 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p5.csv')
 df6 = pd.read_csv('https://raw.githubusercontent.com/dimsdika12/Analyzing-User-Behavior-Divvy-Bike-2023/main/data_dashboard/dashboard_p6.csv')
-image1 = Image.open('E:\\project\Analyzing-User-Behavior-Divvy-Bike-2023\\aset\\bike.jpg')
-image2 = Image.open('E:\\project\\Analyzing-User-Behavior-Divvy-Bike-2023\\aset\\price.png')
+
+image1 = Image.open('aset/bike.jpg')
+image2 = Image.open('aset/pricev2.png')
 
 st.set_page_config(
     page_title = 'Divvy Bike User Behavior Dashboard',
