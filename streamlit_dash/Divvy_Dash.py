@@ -190,7 +190,7 @@ with chart_p5:
     fig5 = px.bar(df5,x='day_name', y='total', color='member_type',barmode='group',
               labels={'day_name':'Day','total':'Number of Bike Rentals'},
               color_discrete_sequence=['#026590', '#45a70b'])
-
+    fig5.update_yaxes(showgrid=False)
     st.plotly_chart(fig5)
 st.write("")
 with description_p5:
