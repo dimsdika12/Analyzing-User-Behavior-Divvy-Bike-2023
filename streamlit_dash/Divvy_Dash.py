@@ -129,7 +129,7 @@ with p2_chart:
                 hole=0.3,
                 )
         fig1.update_traces(pull=[0.1 if bt == 'docked_bike' else 0 for bt in df2['bike_type']], 
-                    textinfo='percent+label', 
+                    textinfo='percent', 
                     insidetextorientation='radial')
         st.plotly_chart(fig1)
 
@@ -138,7 +138,9 @@ with p2_chart:
         fig2 = px.bar(df2_1, x='member_type', y='percentage', color='bike_type', barmode='group',
                  title='Distribution of Bike Type Usage by Member Type',
                  labels={'percentage': 'Percentage', 'member_type': 'Member Type', 'bike_type': 'Bike Type'},
-                 color_discrete_sequence=[ '#026590', '#ff9999','#45a70b'])
+                 color_discrete_sequence=[ '#026590', '#ff9999','#45a70b']
+                 ,text='percentage')
+        fig2.update_traces(texttemplate='%{text:.2f}', textposition='inside')
 
         st.plotly_chart(fig2)
 
